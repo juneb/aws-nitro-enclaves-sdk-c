@@ -20,7 +20,11 @@ Request Syntax
 
 {
    "CustomKeyStoreId": "string",
-   "NumberOfBytes": number
+   "NumberOfBytes": number,
+   "Recipient": { 
+      "AttestationDocument": blob,
+      "KeyEncryptionAlgorithm": "string"
+   }
 }
 ```
 
@@ -71,6 +75,7 @@ Required: No
 ## Response Syntax
 ```json
 {
+   "CiphertextForRecipient": blob,
    "Plaintext": blob
 }
 ```
